@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF829D5C2587AAB300251017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D5B2587AAB300251017 /* AppDelegate.swift */; };
+		EF829D5E2587AAB300251017 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D5D2587AAB300251017 /* SceneDelegate.swift */; };
+		EF829D602587AAB300251017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D5F2587AAB300251017 /* ViewController.swift */; };
+		EF829D632587AAB300251017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF829D612587AAB300251017 /* Main.storyboard */; };
+		EF829D652587AAB600251017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF829D642587AAB600251017 /* Assets.xcassets */; };
+		EF829D682587AAB600251017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF829D662587AAB600251017 /* LaunchScreen.storyboard */; };
+		EF829D732587AAB600251017 /* instaGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D722587AAB600251017 /* instaGridTests.swift */; };
+		EF829D7E2587AAB600251017 /* instaGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D7D2587AAB600251017 /* instaGridUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF829D6F2587AAB600251017 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF829D502587AAB300251017 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF829D572587AAB300251017;
+			remoteInfo = instaGrid;
+		};
+		EF829D7A2587AAB600251017 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF829D502587AAB300251017 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF829D572587AAB300251017;
+			remoteInfo = instaGrid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF829D582587AAB300251017 /* instaGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instaGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF829D5B2587AAB300251017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF829D5D2587AAB300251017 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EF829D5F2587AAB300251017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF829D622587AAB300251017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF829D642587AAB600251017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF829D672587AAB600251017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF829D692587AAB600251017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF829D6E2587AAB600251017 /* instaGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instaGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF829D722587AAB600251017 /* instaGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instaGridTests.swift; sourceTree = "<group>"; };
+		EF829D742587AAB600251017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF829D792587AAB600251017 /* instaGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instaGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF829D7D2587AAB600251017 /* instaGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instaGridUITests.swift; sourceTree = "<group>"; };
+		EF829D7F2587AAB600251017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF829D552587AAB300251017 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF829D6B2587AAB600251017 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF829D762587AAB600251017 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF829D4F2587AAB300251017 = {
+			isa = PBXGroup;
+			children = (
+				EF829D5A2587AAB300251017 /* instaGrid */,
+				EF829D712587AAB600251017 /* instaGridTests */,
+				EF829D7C2587AAB600251017 /* instaGridUITests */,
+				EF829D592587AAB300251017 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF829D592587AAB300251017 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF829D582587AAB300251017 /* instaGrid.app */,
+				EF829D6E2587AAB600251017 /* instaGridTests.xctest */,
+				EF829D792587AAB600251017 /* instaGridUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF829D5A2587AAB300251017 /* instaGrid */ = {
+			isa = PBXGroup;
+			children = (
+				EF829D5B2587AAB300251017 /* AppDelegate.swift */,
+				EF829D5D2587AAB300251017 /* SceneDelegate.swift */,
+				EF829D5F2587AAB300251017 /* ViewController.swift */,
+				EF829D612587AAB300251017 /* Main.storyboard */,
+				EF829D642587AAB600251017 /* Assets.xcassets */,
+				EF829D662587AAB600251017 /* LaunchScreen.storyboard */,
+				EF829D692587AAB600251017 /* Info.plist */,
+			);
+			path = instaGrid;
+			sourceTree = "<group>";
+		};
+		EF829D712587AAB600251017 /* instaGridTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF829D722587AAB600251017 /* instaGridTests.swift */,
+				EF829D742587AAB600251017 /* Info.plist */,
+			);
+			path = instaGridTests;
+			sourceTree = "<group>";
+		};
+		EF829D7C2587AAB600251017 /* instaGridUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF829D7D2587AAB600251017 /* instaGridUITests.swift */,
+				EF829D7F2587AAB600251017 /* Info.plist */,
+			);
+			path = instaGridUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF829D572587AAB300251017 /* instaGrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF829D822587AAB600251017 /* Build configuration list for PBXNativeTarget "instaGrid" */;
+			buildPhases = (
+				EF829D542587AAB300251017 /* Sources */,
+				EF829D552587AAB300251017 /* Frameworks */,
+				EF829D562587AAB300251017 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = instaGrid;
+			productName = instaGrid;
+			productReference = EF829D582587AAB300251017 /* instaGrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF829D6D2587AAB600251017 /* instaGridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF829D852587AAB600251017 /* Build configuration list for PBXNativeTarget "instaGridTests" */;
+			buildPhases = (
+				EF829D6A2587AAB600251017 /* Sources */,
+				EF829D6B2587AAB600251017 /* Frameworks */,
+				EF829D6C2587AAB600251017 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF829D702587AAB600251017 /* PBXTargetDependency */,
+			);
+			name = instaGridTests;
+			productName = instaGridTests;
+			productReference = EF829D6E2587AAB600251017 /* instaGridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF829D782587AAB600251017 /* instaGridUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF829D882587AAB600251017 /* Build configuration list for PBXNativeTarget "instaGridUITests" */;
+			buildPhases = (
+				EF829D752587AAB600251017 /* Sources */,
+				EF829D762587AAB600251017 /* Frameworks */,
+				EF829D772587AAB600251017 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF829D7B2587AAB600251017 /* PBXTargetDependency */,
+			);
+			name = instaGridUITests;
+			productName = instaGridUITests;
+			productReference = EF829D792587AAB600251017 /* instaGridUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF829D502587AAB300251017 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					EF829D572587AAB300251017 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					EF829D6D2587AAB600251017 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = EF829D572587AAB300251017;
+					};
+					EF829D782587AAB600251017 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = EF829D572587AAB300251017;
+					};
+				};
+			};
+			buildConfigurationList = EF829D532587AAB300251017 /* Build configuration list for PBXProject "instaGrid" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF829D4F2587AAB300251017;
+			productRefGroup = EF829D592587AAB300251017 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF829D572587AAB300251017 /* instaGrid */,
+				EF829D6D2587AAB600251017 /* instaGridTests */,
+				EF829D782587AAB600251017 /* instaGridUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF829D562587AAB300251017 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF829D682587AAB600251017 /* LaunchScreen.storyboard in Resources */,
+				EF829D652587AAB600251017 /* Assets.xcassets in Resources */,
+				EF829D632587AAB300251017 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF829D6C2587AAB600251017 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF829D772587AAB600251017 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF829D542587AAB300251017 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF829D602587AAB300251017 /* ViewController.swift in Sources */,
+				EF829D5C2587AAB300251017 /* AppDelegate.swift in Sources */,
+				EF829D5E2587AAB300251017 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF829D6A2587AAB600251017 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF829D732587AAB600251017 /* instaGridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF829D752587AAB600251017 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF829D7E2587AAB600251017 /* instaGridUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF829D702587AAB600251017 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF829D572587AAB300251017 /* instaGrid */;
+			targetProxy = EF829D6F2587AAB600251017 /* PBXContainerItemProxy */;
+		};
+		EF829D7B2587AAB600251017 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF829D572587AAB300251017 /* instaGrid */;
+			targetProxy = EF829D7A2587AAB600251017 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF829D612587AAB300251017 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF829D622587AAB300251017 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF829D662587AAB600251017 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF829D672587AAB600251017 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF829D802587AAB600251017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF829D812587AAB600251017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF829D832587AAB600251017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = instaGrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.manonrusso.instaGrid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF829D842587AAB600251017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = instaGrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.manonrusso.instaGrid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF829D862587AAB600251017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = instaGridTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.manonrusso.instaGridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instaGrid.app/instaGrid";
+			};
+			name = Debug;
+		};
+		EF829D872587AAB600251017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = instaGridTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.manonrusso.instaGridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instaGrid.app/instaGrid";
+			};
+			name = Release;
+		};
+		EF829D892587AAB600251017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = instaGridUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.manonrusso.instaGridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = instaGrid;
+			};
+			name = Debug;
+		};
+		EF829D8A2587AAB600251017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = instaGridUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.manonrusso.instaGridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = instaGrid;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF829D532587AAB300251017 /* Build configuration list for PBXProject "instaGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF829D802587AAB600251017 /* Debug */,
+				EF829D812587AAB600251017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF829D822587AAB600251017 /* Build configuration list for PBXNativeTarget "instaGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF829D832587AAB600251017 /* Debug */,
+				EF829D842587AAB600251017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF829D852587AAB600251017 /* Build configuration list for PBXNativeTarget "instaGridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF829D862587AAB600251017 /* Debug */,
+				EF829D872587AAB600251017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF829D882587AAB600251017 /* Build configuration list for PBXNativeTarget "instaGridUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF829D892587AAB600251017 /* Debug */,
+				EF829D8A2587AAB600251017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF829D502587AAB300251017 /* Project object */;
+}
