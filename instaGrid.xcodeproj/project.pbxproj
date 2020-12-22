@@ -15,6 +15,8 @@
 		EF829D682587AAB600251017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF829D662587AAB600251017 /* LaunchScreen.storyboard */; };
 		EF829D732587AAB600251017 /* instaGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D722587AAB600251017 /* instaGridTests.swift */; };
 		EF829D7E2587AAB600251017 /* instaGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D7D2587AAB600251017 /* instaGridUITests.swift */; };
+		EF8A28402587AEBE00411DB8 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF8A283F2587AEBE00411DB8 /* ThirstySoftRegular.otf */; };
+		EF8A28482587AEC500411DB8 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF8A28472587AEC500411DB8 /* Delm-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +47,12 @@
 		EF829D692587AAB600251017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF829D6E2587AAB600251017 /* instaGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instaGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF829D722587AAB600251017 /* instaGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instaGridTests.swift; sourceTree = "<group>"; };
-		EF829D742587AAB600251017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF829D742587AAB600251017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = instaGridTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		EF829D792587AAB600251017 /* instaGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instaGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF829D7D2587AAB600251017 /* instaGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instaGridUITests.swift; sourceTree = "<group>"; };
 		EF829D7F2587AAB600251017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF8A283F2587AEBE00411DB8 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		EF8A28472587AEC500411DB8 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +80,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF6DD28E2587B5010083523B /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				EF829D642587AAB600251017 /* Assets.xcassets */,
+				EF829D5B2587AAB300251017 /* AppDelegate.swift */,
+				EF829D5D2587AAB300251017 /* SceneDelegate.swift */,
+				EF8A28472587AEC500411DB8 /* Delm-Medium.otf */,
+				EF8A283F2587AEBE00411DB8 /* ThirstySoftRegular.otf */,
+				EF829D662587AAB600251017 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		EF6DD28F2587B5350083523B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF6DD2902587B53B0083523B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF829D612587AAB300251017 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF6DD2912587B5420083523B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF829D5F2587AAB300251017 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		EF829D4F2587AAB300251017 = {
 			isa = PBXGroup;
 			children = (
 				EF829D5A2587AAB300251017 /* instaGrid */,
+				EF6DD28E2587B5010083523B /* Supporting files */,
+				EF6DD28F2587B5350083523B /* Model */,
+				EF6DD2902587B53B0083523B /* View */,
+				EF6DD2912587B5420083523B /* Controller */,
 				EF829D712587AAB600251017 /* instaGridTests */,
 				EF829D7C2587AAB600251017 /* instaGridUITests */,
 				EF829D592587AAB300251017 /* Products */,
@@ -99,12 +143,6 @@
 		EF829D5A2587AAB300251017 /* instaGrid */ = {
 			isa = PBXGroup;
 			children = (
-				EF829D5B2587AAB300251017 /* AppDelegate.swift */,
-				EF829D5D2587AAB300251017 /* SceneDelegate.swift */,
-				EF829D5F2587AAB300251017 /* ViewController.swift */,
-				EF829D612587AAB300251017 /* Main.storyboard */,
-				EF829D642587AAB600251017 /* Assets.xcassets */,
-				EF829D662587AAB600251017 /* LaunchScreen.storyboard */,
 				EF829D692587AAB600251017 /* Info.plist */,
 			);
 			path = instaGrid;
@@ -232,7 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF829D682587AAB600251017 /* LaunchScreen.storyboard in Resources */,
+				EF8A28482587AEC500411DB8 /* Delm-Medium.otf in Resources */,
 				EF829D652587AAB600251017 /* Assets.xcassets in Resources */,
+				EF8A28402587AEBE00411DB8 /* ThirstySoftRegular.otf in Resources */,
 				EF829D632587AAB300251017 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
