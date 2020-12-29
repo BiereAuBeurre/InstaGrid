@@ -38,8 +38,8 @@
                                             <constraint firstAttribute="height" constant="8" id="sRd-oc-Vno"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUU-2U-Pf7">
-                                        <rect key="frame" x="34.333333333333329" y="117" width="136" height="37"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUU-2U-Pf7">
+                                        <rect key="frame" x="5" y="117" width="174.66666666666666" height="37"/>
                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="22"/>
                                         <state key="normal" title="Swipe up to share">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,6 +48,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.71764705880000002" green="0.84313725490000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="dUU-2U-Pf7" firstAttribute="leading" secondItem="bRw-TR-11M" secondAttribute="leading" constant="34.333333333333329" id="4gZ-Mu-xGm">
+                                        <variation key="heightClass=compact" constant="5"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="dUU-2U-Pf7" secondAttribute="trailing" constant="14.333333333333314" id="Gcz-KU-oLR">
+                                        <variation key="heightClass=compact" constant="5"/>
+                                    </constraint>
                                     <constraint firstAttribute="bottom" secondItem="dUU-2U-Pf7" secondAttribute="bottom" id="Ltx-fA-iy6"/>
                                     <constraint firstItem="MWG-tZ-Hwl" firstAttribute="top" secondItem="bRw-TR-11M" secondAttribute="top" constant="12" id="M6H-KN-VUT"/>
                                     <constraint firstItem="MWG-tZ-Hwl" firstAttribute="centerX" secondItem="bRw-TR-11M" secondAttribute="centerX" id="Val-he-2v8"/>
@@ -55,6 +61,18 @@
                                     <constraint firstItem="dUU-2U-Pf7" firstAttribute="top" secondItem="MWG-tZ-Hwl" secondAttribute="bottom" constant="7" id="sG3-RV-ZBW"/>
                                     <constraint firstItem="MWG-tZ-Hwl" firstAttribute="centerX" secondItem="dUU-2U-Pf7" secondAttribute="centerX" id="v3X-g9-VFc"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4gZ-Mu-xGm"/>
+                                        <exclude reference="Gcz-KU-oLR"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4gZ-Mu-xGm"/>
+                                        <include reference="Gcz-KU-oLR"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evC-hr-oeD" userLabel="main View">
                                 <rect key="frame" x="267.66666666666669" y="60" width="309.00000000000006" height="309"/>
