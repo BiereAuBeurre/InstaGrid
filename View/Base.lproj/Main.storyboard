@@ -24,22 +24,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rin-UM-ltq">
-                                <rect key="frame" x="362.66666666666669" y="7.9999999999999964" width="118.66666666666669" height="61.666666666666657"/>
+                                <rect key="frame" x="362.66666666666669" y="8" width="118.66666666666669" height="17"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-TR-11M" userLabel="swipe View">
-                                <rect key="frame" x="54.000000000000014" y="118" width="202.33333333333337" height="154"/>
+                                <rect key="frame" x="54" y="158.66666666666666" width="180" height="77"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="MWG-tZ-Hwl">
-                                        <rect key="frame" x="90" y="12" width="22.333333333333329" height="8"/>
+                                        <rect key="frame" x="87.666666666666657" y="16" width="4.6666666666666714" height="16"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="8" id="sRd-oc-Vno"/>
+                                            <constraint firstAttribute="height" constant="16" id="sRd-oc-Vno"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUU-2U-Pf7">
-                                        <rect key="frame" x="5" y="27" width="192.33333333333334" height="127"/>
+                                        <rect key="frame" x="5" y="40" width="170" height="37"/>
                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="22"/>
                                         <state key="normal" title="Swipe up to share">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,16 +55,17 @@
                                         <variation key="heightClass=compact" constant="5"/>
                                     </constraint>
                                     <constraint firstAttribute="bottom" secondItem="dUU-2U-Pf7" secondAttribute="bottom" id="Ltx-fA-iy6"/>
-                                    <constraint firstItem="MWG-tZ-Hwl" firstAttribute="top" secondItem="bRw-TR-11M" secondAttribute="top" constant="12" id="M6H-KN-VUT"/>
+                                    <constraint firstItem="MWG-tZ-Hwl" firstAttribute="top" secondItem="bRw-TR-11M" secondAttribute="top" constant="16" id="M6H-KN-VUT"/>
                                     <constraint firstItem="MWG-tZ-Hwl" firstAttribute="centerX" secondItem="bRw-TR-11M" secondAttribute="centerX" id="Val-he-2v8"/>
                                     <constraint firstItem="MWG-tZ-Hwl" firstAttribute="leading" secondItem="bRw-TR-11M" secondAttribute="leading" constant="90" id="kB3-HT-yfB"/>
-                                    <constraint firstItem="dUU-2U-Pf7" firstAttribute="top" secondItem="MWG-tZ-Hwl" secondAttribute="bottom" constant="7" id="sG3-RV-ZBW"/>
+                                    <constraint firstItem="dUU-2U-Pf7" firstAttribute="top" secondItem="MWG-tZ-Hwl" secondAttribute="bottom" constant="8" id="sG3-RV-ZBW"/>
                                     <constraint firstItem="MWG-tZ-Hwl" firstAttribute="centerX" secondItem="dUU-2U-Pf7" secondAttribute="centerX" id="v3X-g9-VFc"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="4gZ-Mu-xGm"/>
                                         <exclude reference="Gcz-KU-oLR"/>
+                                        <exclude reference="kB3-HT-yfB"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -75,30 +76,30 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evC-hr-oeD" userLabel="main View">
-                                <rect key="frame" x="280.33333333333337" y="77.666666666666657" width="283.33333333333337" height="283.33333333333337"/>
+                                <rect key="frame" x="258" y="33" width="328" height="328"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vbg-Yo-K1Y">
-                                        <rect key="frame" x="8" y="8" width="267.33333333333331" height="267.33333333333331"/>
+                                        <rect key="frame" x="8" y="8" width="312" height="312"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yMK-YW-K2f">
-                                                <rect key="frame" x="0.0" y="0.0" width="267.33333333333331" height="129.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="312" height="152"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rae-EA-ya3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="129.66666666666666"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="152"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="en6-pY-wT8">
-                                                        <rect key="frame" x="137.66666666666669" y="0.0" width="129.66666666666669" height="129.66666666666666"/>
+                                                        <rect key="frame" x="160" y="0.0" width="152" height="152"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eu2-KC-UrR">
-                                                <rect key="frame" x="0.0" y="137.66666666666669" width="267.33333333333331" height="129.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="160" width="312" height="152"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P4x-CT-H1F">
-                                                        <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="129.66666666666666"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="152"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-eq-Rhr">
-                                                        <rect key="frame" x="137.66666666666669" y="0.0" width="129.66666666666669" height="129.66666666666666"/>
+                                                        <rect key="frame" x="160" y="0.0" width="152" height="152"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
@@ -130,16 +131,16 @@
                                 </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NGJ-FJ-KGd" userLabel="layouts StackView">
-                                <rect key="frame" x="593.66666666666663" y="77.666666666666657" width="176.33333333333337" height="283.33333333333337"/>
+                                <rect key="frame" x="616" y="33" width="154" height="328"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 1" translatesAutoresizingMaskIntoConstraints="NO" id="fOQ-ce-eoK">
-                                        <rect key="frame" x="0.0" y="0.0" width="176.33333333333334" height="89"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="154" height="104"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" image="Layout 2" translatesAutoresizingMaskIntoConstraints="NO" id="DTi-DH-QGH">
-                                        <rect key="frame" x="0.0" y="97" width="176.33333333333334" height="89.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="112" width="154" height="104"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="VqH-l4-3HN">
-                                        <rect key="frame" x="0.0" y="194.33333333333331" width="176.33333333333334" height="89"/>
+                                        <rect key="frame" x="0.0" y="224" width="154" height="104"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -224,6 +225,7 @@
                             <constraint firstItem="rin-UM-ltq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dOi-zs-ZBt">
                                 <variation key="heightClass=compact" constant="8"/>
                             </constraint>
+                            <constraint firstItem="bRw-TR-11M" firstAttribute="centerY" secondItem="evC-hr-oeD" secondAttribute="centerY" id="eIW-zR-0pz"/>
                             <constraint firstItem="bRw-TR-11M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="fFd-er-IaC"/>
                             <constraint firstItem="evC-hr-oeD" firstAttribute="leading" secondItem="bRw-TR-11M" secondAttribute="trailing" constant="24" id="g41-9j-M9O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NGJ-FJ-KGd" secondAttribute="trailing" constant="52" id="hRb-cr-cXA">
@@ -266,6 +268,7 @@
                                 <exclude reference="hfF-sm-uJv"/>
                                 <exclude reference="kWc-EV-w2l"/>
                                 <exclude reference="Ab4-QJ-Ofx"/>
+                                <exclude reference="eIW-zR-0pz"/>
                                 <exclude reference="fFd-er-IaC"/>
                                 <exclude reference="vOZ-oI-VWx"/>
                                 <exclude reference="3Ov-3W-B4g"/>
@@ -299,7 +302,7 @@
                                 <exclude reference="6p1-6d-Yy8"/>
                                 <exclude reference="9KD-xN-ETf"/>
                                 <include reference="DIl-6U-JP2"/>
-                                <include reference="Iqi-lB-inA"/>
+                                <exclude reference="Iqi-lB-inA"/>
                                 <exclude reference="JLL-nl-AyA"/>
                                 <exclude reference="OUg-fJ-7Ym"/>
                                 <exclude reference="OZn-rH-yQ4"/>
@@ -308,8 +311,9 @@
                                 <include reference="kWc-EV-w2l"/>
                                 <exclude reference="2oz-gk-M9x"/>
                                 <exclude reference="Ab4-QJ-Ofx"/>
-                                <include reference="fFd-er-IaC"/>
-                                <include reference="vOZ-oI-VWx"/>
+                                <include reference="eIW-zR-0pz"/>
+                                <exclude reference="fFd-er-IaC"/>
+                                <exclude reference="vOZ-oI-VWx"/>
                                 <exclude reference="3Ov-3W-B4g"/>
                                 <include reference="AcV-Jq-AvV"/>
                                 <exclude reference="HxG-zz-Nko"/>
