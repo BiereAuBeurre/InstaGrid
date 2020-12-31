@@ -49,8 +49,9 @@
                                 <rect key="frame" x="92.666666666666686" y="141" width="205" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="MWG-tZ-Hwl">
-                                        <rect key="frame" x="99.999999999999986" y="16" width="4.6666666666666714" height="32"/>
+                                        <rect key="frame" x="98.333333333333329" y="16" width="8" height="32"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="8" id="GMA-0v-gSL"/>
                                             <constraint firstAttribute="height" constant="32" id="sRd-oc-Vno"/>
                                         </constraints>
                                     </imageView>
