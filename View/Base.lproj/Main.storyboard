@@ -28,14 +28,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="2FP-6k-TAS"/>
                                     <constraint firstAttribute="height" constant="60" id="oC9-xB-Osw"/>
-                                    <constraint firstAttribute="width" constant="120" id="vo2-ZU-yEY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="vo2-ZU-yEY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-TR-11M" userLabel="swipe View">
-                                <rect key="frame" x="92.666666666666686" y="136" width="205" height="100"/>
+                                <rect key="frame" x="92.666666666666686" y="128" width="205" height="113"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="MWG-tZ-Hwl">
                                         <rect key="frame" x="98.333333333333329" y="16" width="8" height="32"/>
@@ -45,7 +45,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUU-2U-Pf7">
-                                        <rect key="frame" x="34.333333333333329" y="56" width="136" height="44"/>
+                                        <rect key="frame" x="34.333333333333329" y="56" width="136" height="49"/>
                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="22"/>
                                         <state key="normal" title="Swipe up to share">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,15 +61,18 @@
                                     <constraint firstAttribute="trailing" secondItem="dUU-2U-Pf7" secondAttribute="trailing" constant="14.333333333333314" id="Gcz-KU-oLR">
                                         <variation key="heightClass=compact" constant="5"/>
                                     </constraint>
-                                    <constraint firstAttribute="bottom" secondItem="dUU-2U-Pf7" secondAttribute="bottom" id="Ltx-fA-iy6"/>
+                                    <constraint firstAttribute="bottom" secondItem="dUU-2U-Pf7" secondAttribute="bottom" constant="8" id="Ltx-fA-iy6"/>
                                     <constraint firstItem="MWG-tZ-Hwl" firstAttribute="top" secondItem="bRw-TR-11M" secondAttribute="top" constant="16" id="M6H-KN-VUT"/>
                                     <constraint firstItem="MWG-tZ-Hwl" firstAttribute="centerX" secondItem="bRw-TR-11M" secondAttribute="centerX" id="Val-he-2v8"/>
+                                    <constraint firstAttribute="width" constant="205" id="hi9-AG-Vjp"/>
                                     <constraint firstItem="MWG-tZ-Hwl" firstAttribute="leading" secondItem="bRw-TR-11M" secondAttribute="leading" constant="90" id="kB3-HT-yfB"/>
+                                    <constraint firstAttribute="height" constant="113" id="nle-7P-XHo"/>
                                     <constraint firstItem="dUU-2U-Pf7" firstAttribute="top" secondItem="MWG-tZ-Hwl" secondAttribute="bottom" constant="8" id="sG3-RV-ZBW"/>
                                     <constraint firstItem="MWG-tZ-Hwl" firstAttribute="centerX" secondItem="dUU-2U-Pf7" secondAttribute="centerX" id="v3X-g9-VFc"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="4Ch-ki-1xz"/>
                                         <exclude reference="4gZ-Mu-xGm"/>
                                         <exclude reference="Gcz-KU-oLR"/>
                                         <exclude reference="kB3-HT-yfB"/>
@@ -83,7 +86,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evC-hr-oeD" userLabel="main View">
-                                <rect key="frame" x="30" y="252" width="330" height="330"/>
+                                <rect key="frame" x="30" y="257" width="330" height="330"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vbg-Yo-K1Y">
                                         <rect key="frame" x="8" y="8" width="314" height="314"/>
@@ -183,7 +186,7 @@
                         <color key="backgroundColor" red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="NGJ-FJ-KGd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="1Vy-kY-qMI"/>
-                            <constraint firstItem="bRw-TR-11M" firstAttribute="top" secondItem="rin-UM-ltq" secondAttribute="bottom" constant="24" id="2oz-gk-M9x"/>
+                            <constraint firstItem="bRw-TR-11M" firstAttribute="top" secondItem="rin-UM-ltq" secondAttribute="bottom" constant="16" id="2oz-gk-M9x"/>
                             <constraint firstItem="evC-hr-oeD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="3Ov-3W-B4g">
                                 <variation key="heightClass=compact" constant="20"/>
                             </constraint>
@@ -248,7 +251,7 @@
                                 <variation key="heightClass=compact" constant="8"/>
                             </constraint>
                             <constraint firstItem="rin-UM-ltq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="mCJ-ac-STA"/>
-                            <constraint firstItem="rin-UM-ltq" firstAttribute="centerX" secondItem="bRw-TR-11M" secondAttribute="centerX" id="nLh-wW-whl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerX" secondItem="bRw-TR-11M" secondAttribute="centerX" id="nLh-wW-whl"/>
                             <constraint firstItem="evC-hr-oeD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nrd-12-wke"/>
                             <constraint firstItem="NGJ-FJ-KGd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="nrn-fa-sVN">
                                 <variation key="heightClass=compact" constant="32"/>
@@ -282,6 +285,7 @@
                                 <exclude reference="eIW-zR-0pz"/>
                                 <exclude reference="fFd-er-IaC"/>
                                 <exclude reference="vOZ-oI-VWx"/>
+                                <exclude reference="vjm-3Z-1ub"/>
                                 <exclude reference="3Ov-3W-B4g"/>
                                 <exclude reference="AcV-Jq-AvV"/>
                                 <exclude reference="HxG-zz-Nko"/>
