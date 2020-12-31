@@ -24,29 +24,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rin-UM-ltq">
-                                <rect key="frame" x="97" y="52" width="196" height="65"/>
+                                <rect key="frame" x="135" y="52" width="120" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="GwP-Ag-Rgm"/>
-                                    <constraint firstAttribute="width" constant="125" id="XoZ-eA-Tqz">
-                                        <variation key="heightClass=compact" constant="150"/>
-                                    </constraint>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="2FP-6k-TAS"/>
+                                    <constraint firstAttribute="height" constant="60" id="oC9-xB-Osw"/>
+                                    <constraint firstAttribute="width" constant="120" id="vo2-ZU-yEY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="XoZ-eA-Tqz"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="XoZ-eA-Tqz"/>
-                                    </mask>
-                                </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-TR-11M" userLabel="swipe View">
-                                <rect key="frame" x="92.666666666666686" y="141" width="205" height="100"/>
+                                <rect key="frame" x="92.666666666666686" y="136" width="205" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="MWG-tZ-Hwl">
                                         <rect key="frame" x="98.333333333333329" y="16" width="8" height="32"/>
@@ -88,13 +77,13 @@
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
-                                        <include reference="4gZ-Mu-xGm"/>
-                                        <include reference="Gcz-KU-oLR"/>
+                                        <exclude reference="4gZ-Mu-xGm"/>
+                                        <exclude reference="Gcz-KU-oLR"/>
                                     </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evC-hr-oeD" userLabel="main View">
-                                <rect key="frame" x="30" y="257" width="330" height="330"/>
+                                <rect key="frame" x="30" y="252" width="330" height="330"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vbg-Yo-K1Y">
                                         <rect key="frame" x="8" y="8" width="314" height="314"/>
@@ -287,6 +276,8 @@
                                 <exclude reference="hRb-cr-cXA"/>
                                 <exclude reference="hfF-sm-uJv"/>
                                 <exclude reference="kWc-EV-w2l"/>
+                                <exclude reference="ZUg-fb-hUh"/>
+                                <exclude reference="mCJ-ac-STA"/>
                                 <exclude reference="Ab4-QJ-Ofx"/>
                                 <exclude reference="eIW-zR-0pz"/>
                                 <exclude reference="fFd-er-IaC"/>
@@ -301,7 +292,6 @@
                                 <exclude reference="WqI-JH-atS"/>
                                 <exclude reference="dG3-cJ-6iM"/>
                                 <exclude reference="g41-9j-M9O"/>
-                                <exclude reference="ZUg-fb-hUh"/>
                                 <exclude reference="8xW-gt-4HF"/>
                                 <exclude reference="Fq9-Vc-FkZ"/>
                                 <exclude reference="P88-h2-u8g"/>
@@ -330,6 +320,11 @@
                                 <exclude reference="hRb-cr-cXA"/>
                                 <include reference="hfF-sm-uJv"/>
                                 <include reference="kWc-EV-w2l"/>
+                                <exclude reference="PkG-Xh-fQe"/>
+                                <include reference="ZUg-fb-hUh"/>
+                                <include reference="dOi-zs-ZBt"/>
+                                <exclude reference="mCJ-ac-STA"/>
+                                <exclude reference="nLh-wW-whl"/>
                                 <exclude reference="2oz-gk-M9x"/>
                                 <exclude reference="Ab4-QJ-Ofx"/>
                                 <include reference="eIW-zR-0pz"/>
@@ -349,11 +344,6 @@
                                 <exclude reference="hkZ-NS-bag"/>
                                 <exclude reference="nrd-12-wke"/>
                                 <exclude reference="qNa-WI-WFY"/>
-                                <exclude reference="PkG-Xh-fQe"/>
-                                <include reference="ZUg-fb-hUh"/>
-                                <include reference="dOi-zs-ZBt"/>
-                                <exclude reference="mCJ-ac-STA"/>
-                                <exclude reference="nLh-wW-whl"/>
                                 <exclude reference="1Vy-kY-qMI"/>
                                 <include reference="8xW-gt-4HF"/>
                                 <exclude reference="Fq9-Vc-FkZ"/>
