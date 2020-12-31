@@ -24,8 +24,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rin-UM-ltq">
-                                <rect key="frame" x="97" y="64" width="196" height="39"/>
+                                <rect key="frame" x="97" y="52" width="196" height="65"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="GwP-Ag-Rgm"/>
                                     <constraint firstAttribute="width" constant="125" id="XoZ-eA-Tqz">
                                         <variation key="heightClass=compact" constant="150"/>
                                     </constraint>
@@ -45,7 +46,7 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-TR-11M" userLabel="swipe View">
-                                <rect key="frame" x="92.666666666666686" y="138" width="205" height="103"/>
+                                <rect key="frame" x="92.666666666666686" y="141" width="205" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="MWG-tZ-Hwl">
                                         <rect key="frame" x="99.999999999999986" y="16" width="4.6666666666666714" height="32"/>
@@ -54,7 +55,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUU-2U-Pf7">
-                                        <rect key="frame" x="34.333333333333329" y="56" width="136" height="47"/>
+                                        <rect key="frame" x="34.333333333333329" y="56" width="136" height="44"/>
                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="22"/>
                                         <state key="normal" title="Swipe up to share">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,6 +64,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.71764705880000002" green="0.84313725490000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4Ch-ki-1xz"/>
                                     <constraint firstItem="dUU-2U-Pf7" firstAttribute="leading" secondItem="bRw-TR-11M" secondAttribute="leading" constant="34.333333333333329" id="4gZ-Mu-xGm">
                                         <variation key="heightClass=compact" constant="5"/>
                                     </constraint>
@@ -191,7 +193,7 @@
                         <color key="backgroundColor" red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="NGJ-FJ-KGd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="1Vy-kY-qMI"/>
-                            <constraint firstItem="bRw-TR-11M" firstAttribute="top" secondItem="rin-UM-ltq" secondAttribute="bottom" constant="35" id="2oz-gk-M9x"/>
+                            <constraint firstItem="bRw-TR-11M" firstAttribute="top" secondItem="rin-UM-ltq" secondAttribute="bottom" constant="24" id="2oz-gk-M9x"/>
                             <constraint firstItem="evC-hr-oeD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="3Ov-3W-B4g">
                                 <variation key="heightClass=compact" constant="20"/>
                             </constraint>
@@ -215,7 +217,7 @@
                             <constraint firstItem="evC-hr-oeD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="15" id="HxG-zz-Nko">
                                 <variation key="heightClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="NGJ-FJ-KGd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="evC-hr-oeD" secondAttribute="bottom" constant="16" id="HxZ-DP-oI3"/>
+                            <constraint firstItem="NGJ-FJ-KGd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="evC-hr-oeD" secondAttribute="bottom" constant="8" id="HxZ-DP-oI3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bRw-TR-11M" secondAttribute="bottom" constant="97" id="Iqi-lB-inA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="evC-hr-oeD" secondAttribute="bottom" constant="1" id="JLL-nl-AyA">
                                 <variation key="heightClass=compact" constant="8"/>
@@ -238,7 +240,7 @@
                             </constraint>
                             <constraint firstItem="rin-UM-ltq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZUg-fb-hUh"/>
                             <constraint firstItem="evC-hr-oeD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dG3-cJ-6iM"/>
-                            <constraint firstItem="rin-UM-ltq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dOi-zs-ZBt">
+                            <constraint firstItem="rin-UM-ltq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="dOi-zs-ZBt">
                                 <variation key="heightClass=compact" constant="8"/>
                             </constraint>
                             <constraint firstItem="bRw-TR-11M" firstAttribute="centerY" secondItem="evC-hr-oeD" secondAttribute="centerY" id="eIW-zR-0pz"/>
