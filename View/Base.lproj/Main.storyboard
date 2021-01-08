@@ -118,7 +118,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5a-cc-QSF">
                                         <rect key="frame" x="96" y="0.0" width="80" height="80"/>
-                                        <state key="normal" image="Layout 2"/>
+                                        <state key="normal" backgroundImage="Layout 2"/>
                                         <connections>
                                             <action selector="buttonLayout2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UWO-TJ-Rsy"/>
                                         </connections>
