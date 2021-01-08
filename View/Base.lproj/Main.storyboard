@@ -281,6 +281,20 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="arrowSwipeView" destination="MWG-tZ-Hwl" id="LCS-WS-G9Y"/>
+                        <outlet property="holderLayoutsView" destination="NGJ-FJ-KGd" id="bE9-qq-2cq"/>
+                        <outlet property="holderMainView" destination="evC-hr-oeD" id="BQT-xD-n4U"/>
+                        <outlet property="holderSwipeView" destination="m4s-gu-Xl2" id="bCe-0l-l0w"/>
+                        <outlet property="layoutButton1" destination="ZZc-O1-oBt" id="P9P-w1-ldd"/>
+                        <outlet property="layoutButton2" destination="g5a-cc-QSF" id="aCL-WU-IFW"/>
+                        <outlet property="layoutButton3" destination="Ehn-VU-gMw" id="7X1-Td-VIn"/>
+                        <outlet property="photoButton1" destination="aBp-KV-t5C" id="Zik-No-9dW"/>
+                        <outlet property="photoButton2" destination="WL4-gF-DRq" id="rZT-An-fvC"/>
+                        <outlet property="photoButton3" destination="veh-T5-ZEw" id="sCY-4f-3L8"/>
+                        <outlet property="photoButton4" destination="iFu-qv-Msn" id="LRB-0G-0Yg"/>
+                        <outlet property="textSwipeView" destination="dUU-2U-Pf7" id="Npi-Hs-vHe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
