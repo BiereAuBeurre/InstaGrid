@@ -36,17 +36,30 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var layoutButton3: UIButton!
     
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
+    @IBAction func buttonLayout1Pressed(_ sender: UIButton) {
+        sender.setImage(UIImage(named: "Selected"), for: UIControl.State.normal)
+        photoButton1.isHidden = true
+        photoButton3.isHidden = false
 
+    }
+    
+    
+    @IBAction func buttonLayout2Pressed(_ sender: UIButton) {
+        sender.setImage(UIImage(named: "Selected"), for: UIControl.State.normal)
+        photoButton1.isHidden = false
+        photoButton3.isHidden = true
+    }
+    @IBAction func buttonLayout3Pressed(_ sender: UIButton) {
+        sender.setImage(UIImage(named: "Selected"), for: UIControl.State.normal)
+        photoButton1.isHidden = false
+        photoButton3.isHidden = false
+
+    }
+    
 }
 
