@@ -46,20 +46,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func didTapMainViewbutton(_ sender: UIButton) {
         pictureButton = sender
         let imagePicker = UIImagePickerController()
-        /// Quand touché, ouvre le menu pour sélectionner une image -> Ok
-        /// Choisir une image -> Ok
-        /// L'adapter au bouton (fill) -> /!\ à faire /!\
-        /// Remplacer "+" par 'image choisie -> ok
+        /// Indicate that the source of the picture's going to be the potoLibrary
         imagePicker.sourceType = .photoLibrary
+        /// ??
         imagePicker.delegate = self
-//        imagePicker.allowsEditing = true
+        /// Allow the editing by resizing, useless because of the content mode scaleAspectFill below  :
+        ///imagePicker.allowsEditing = true
+        /// activate the animation and ?
         present(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        ///Add the animation (progressive disapearance of the photo menu)  when the picture is picked
         picker.dismiss(animated: true) { [weak self] in
             if let image = info[.originalImage] as? UIImage {
+                /// Indicate to set the image in the picture button selectionned
                 self?.pictureButton?.setImage(image, for: .normal)
+                /// Then said that the picture'll fill the button selectionned
                 self?.pictureButton?.imageView?.contentMode = .scaleAspectFill
             }
         }
