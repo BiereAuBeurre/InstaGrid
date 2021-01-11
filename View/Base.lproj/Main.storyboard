@@ -109,25 +109,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NGJ-FJ-KGd" userLabel="layouts StackView">
                                 <rect key="frame" x="59" y="596" width="272" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZc-O1-oBt">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZc-O1-oBt">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 1"/>
+                                        <state key="selected" image="Selected"/>
                                         <connections>
-                                            <action selector="buttonLayout1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="86A-Mg-PDq"/>
+                                            <action selector="didTapLayoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3lI-4x-D7F"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5a-cc-QSF">
                                         <rect key="frame" x="96" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 2"/>
+                                        <state key="selected" image="Selected"/>
                                         <connections>
-                                            <action selector="buttonLayout2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UWO-TJ-Rsy"/>
+                                            <action selector="didTapLayoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fz1-YD-OAy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-VU-gMw">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-VU-gMw">
                                         <rect key="frame" x="192" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 3"/>
+                                        <state key="selected" image="Selected"/>
                                         <connections>
-                                            <action selector="buttonLayout3Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSf-CL-sgx"/>
+                                            <action selector="didTapLayoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qET-Gm-LzF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -292,17 +295,14 @@
                     </view>
                     <connections>
                         <outlet property="arrowSwipeView" destination="MWG-tZ-Hwl" id="LCS-WS-G9Y"/>
-                        <outlet property="holderLayoutsView" destination="NGJ-FJ-KGd" id="bE9-qq-2cq"/>
-                        <outlet property="holderMainView" destination="evC-hr-oeD" id="BQT-xD-n4U"/>
-                        <outlet property="holderSwipeView" destination="m4s-gu-Xl2" id="bCe-0l-l0w"/>
-                        <outlet property="layoutButton1" destination="ZZc-O1-oBt" id="P9P-w1-ldd"/>
-                        <outlet property="layoutButton2" destination="g5a-cc-QSF" id="aCL-WU-IFW"/>
-                        <outlet property="layoutButton3" destination="Ehn-VU-gMw" id="7X1-Td-VIn"/>
-                        <outlet property="photoButton1" destination="aBp-KV-t5C" id="Zik-No-9dW"/>
-                        <outlet property="photoButton2" destination="WL4-gF-DRq" id="rZT-An-fvC"/>
-                        <outlet property="photoButton3" destination="veh-T5-ZEw" id="sCY-4f-3L8"/>
-                        <outlet property="photoButton4" destination="iFu-qv-Msn" id="LRB-0G-0Yg"/>
                         <outlet property="textSwipeView" destination="dUU-2U-Pf7" id="Npi-Hs-vHe"/>
+                        <outletCollection property="photoButtons" destination="aBp-KV-t5C" collectionClass="NSMutableArray" id="taE-eJ-PuA"/>
+                        <outletCollection property="photoButtons" destination="WL4-gF-DRq" collectionClass="NSMutableArray" id="zXa-f1-EsV"/>
+                        <outletCollection property="photoButtons" destination="veh-T5-ZEw" collectionClass="NSMutableArray" id="Ohy-pb-mzg"/>
+                        <outletCollection property="photoButtons" destination="iFu-qv-Msn" collectionClass="NSMutableArray" id="ZZf-NH-ZWY"/>
+                        <outletCollection property="layoutButtons" destination="ZZc-O1-oBt" collectionClass="NSMutableArray" id="90l-TQ-lJB"/>
+                        <outletCollection property="layoutButtons" destination="g5a-cc-QSF" collectionClass="NSMutableArray" id="GJT-zy-Qyh"/>
+                        <outletCollection property="layoutButtons" destination="Ehn-VU-gMw" collectionClass="NSMutableArray" id="cwb-jE-uZE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -316,5 +316,6 @@
         <image name="Layout 2" width="26.666666030883789" height="26.666666030883789"/>
         <image name="Layout 3" width="26.666666030883789" height="26.666666030883789"/>
         <image name="Plus" width="40" height="40"/>
+        <image name="Selected" width="26.666666030883789" height="26.666666030883789"/>
     </resources>
 </document>
