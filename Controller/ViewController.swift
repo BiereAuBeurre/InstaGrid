@@ -60,7 +60,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.dismiss(animated: true) { [weak self] in
             if let image = info[.originalImage] as? UIImage {
                 self?.pictureButton?.setImage(image, for: .normal)
-                self?.pictureButton?.imageView?.contentMode = .scaleAspectFit
+                self?.pictureButton?.imageView?.contentMode = .scaleAspectFill
             }
         }
     }
