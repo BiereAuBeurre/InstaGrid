@@ -52,7 +52,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         /// Remplacer "+" par 'image choisie -> ok
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
-        imagePicker.allowsEditing = true
+//        imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -64,7 +64,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
-    
 }
 
 
