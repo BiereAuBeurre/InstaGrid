@@ -48,11 +48,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let imagePicker = UIImagePickerController()
         /// Indicate that the source of the picture's going to be the potoLibrary
         imagePicker.sourceType = .photoLibrary
-        /// ??
+        /// Indicate to the picture to place itself where the user tap
         imagePicker.delegate = self
         /// Allow the editing by resizing, useless because of the content mode scaleAspectFill below  :
-        ///imagePicker.allowsEditing = true
-        /// activate the animation and ?
+        /*imagePicker.allowsEditing = true*/
+        /// Activate the animation that open the library, if disabled nothing happened after taping button
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -60,9 +60,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         ///Add the animation (progressive disapearance of the photo menu)  when the picture is picked
         picker.dismiss(animated: true) { [weak self] in
             if let image = info[.originalImage] as? UIImage {
-                /// Indicate to set the image in the picture button selectionned
+                /// Indicate to set the selectionned picture (let image) in the selectionned picture button
                 self?.pictureButton?.setImage(image, for: .normal)
-                /// Then said that the picture'll fill the button selectionned
+                /// Then said that the picture'll fill the selectionned button
                 self?.pictureButton?.imageView?.contentMode = .scaleAspectFill
             }
         }
