@@ -25,9 +25,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    @IBAction func didSwipe(_ sender : UISwipeGestureRecognizer) {
+    @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
-            print("ok swipe")
+            print("did swipe")
+            let vc = UIActivityViewController(activityItems: [], applicationActivities: [])
+            
+            if let popoverController = vc.popoverPresentationController{
+                popoverController.sourceView = self.view
+                popoverController.sourceRect = self.view.bounds
+            }
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
