@@ -12,6 +12,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var arrowSwipeView: UIImageView!
     @IBOutlet weak var textSwipeView: UIButton!
     @IBOutlet weak var fullSwipeView: UIStackView!
+    @IBOutlet weak var mainView: UIView!
+    
     
     var pictureButton: UIButton!
     
@@ -25,18 +27,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    func asImage() -> UIImage {
+        UIGraphicsBeginImageContext(mainView.frame.size)
+        mainView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetCurrentContext()
+        UIGraphicsEndImageContext()
+        return UIImage(cgImage: image!.makeImage()!)
+    }
+    
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             print("did swipe")
             /// À rajouter :
-            let image = UIImage(named: "Selected") /*(de façon à ce que l'image ressorte cropée à l'identique )*/
-            let vc = UIActivityViewController(activityItems: [image!], applicationActivities: [])
+            let image = asImage()
+            let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
             
-            if let popoverController = vc.popoverPresentationController {
+            if let popoverController = viewController.popoverPresentationController {
                 popoverController.sourceView = self.view
                 popoverController.sourceRect = self.view.bounds
             }
-            self.present(vc, animated: true, completion: nil)
+            present(viewController, animated: true, completion: nil)
         }
     }
     

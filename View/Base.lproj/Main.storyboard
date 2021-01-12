@@ -57,9 +57,6 @@
                                 </subviews>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=compact" alignment="center" axis="vertical" spacing="16"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Weg-wm-4Q1" appends="YES" id="xRj-72-dk0"/>
-                                </connections>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evC-hr-oeD" userLabel="main View">
                                 <rect key="frame" x="45" y="272" width="300" height="300"/>
@@ -121,6 +118,9 @@
                                     <constraint firstAttribute="height" constant="300" id="eqW-bH-do0"/>
                                     <constraint firstAttribute="trailing" secondItem="Vbg-Yo-K1Y" secondAttribute="trailing" constant="16" id="mO7-dD-w5a"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Weg-wm-4Q1" appends="YES" id="XIL-xd-CsQ"/>
+                                </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NGJ-FJ-KGd" userLabel="layouts StackView">
                                 <rect key="frame" x="59" y="596" width="272" height="80"/>
@@ -312,6 +312,7 @@
                     <connections>
                         <outlet property="arrowSwipeView" destination="MWG-tZ-Hwl" id="LCS-WS-G9Y"/>
                         <outlet property="fullSwipeView" destination="m4s-gu-Xl2" id="cvP-m3-gw0"/>
+                        <outlet property="mainView" destination="evC-hr-oeD" id="vLJ-zX-CUo"/>
                         <outlet property="textSwipeView" destination="dUU-2U-Pf7" id="Npi-Hs-vHe"/>
                         <outletCollection property="photoButtons" destination="aBp-KV-t5C" collectionClass="NSMutableArray" id="taE-eJ-PuA"/>
                         <outletCollection property="photoButtons" destination="WL4-gF-DRq" collectionClass="NSMutableArray" id="zXa-f1-EsV"/>
