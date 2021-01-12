@@ -38,7 +38,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             print("did swipe")
-            /// À rajouter :
             let image = asImage()
             let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
             
