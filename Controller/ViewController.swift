@@ -28,9 +28,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             print("did swipe")
-            let vc = UIActivityViewController(activityItems: [], applicationActivities: [])
+            /// À rajouter :
+            let image = UIImage(named: "Selected") /*(de façon à ce que l'image ressorte cropée à l'identique )*/
+            let vc = UIActivityViewController(activityItems: [image!], applicationActivities: [])
             
-            if let popoverController = vc.popoverPresentationController{
+            if let popoverController = vc.popoverPresentationController {
                 popoverController.sourceView = self.view
                 popoverController.sourceRect = self.view.bounds
             }
