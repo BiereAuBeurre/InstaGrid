@@ -11,9 +11,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var arrowSwipeView: UIImageView!
     @IBOutlet weak var textSwipeView: UIButton!
- 
+    @IBOutlet weak var fullSwipeView: UIStackView!
+    
     var pictureButton: UIButton!
-
+    
     @IBOutlet var photoButtons: [UIButton]!
     @IBOutlet var layoutButtons: [UIButton]!
     
@@ -24,6 +25,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    @IBAction func didSwipe(_ sender : UISwipeGestureRecognizer) {
+        if sender.state == .ended {
+            print("ok swipe")
+        }
+    }
     
     @IBAction func didTapLayoutButton(_ sender: UIButton) {
         for button in layoutButtons {
@@ -67,6 +73,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
+    
 }
 
 

@@ -55,7 +55,11 @@
                                         </state>
                                     </button>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <variation key="heightClass=compact" alignment="center" axis="vertical" spacing="16"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Weg-wm-4Q1" appends="YES" id="xRj-72-dk0"/>
+                                </connections>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evC-hr-oeD" userLabel="main View">
                                 <rect key="frame" x="45" y="272" width="300" height="300"/>
@@ -307,6 +311,7 @@
                     </view>
                     <connections>
                         <outlet property="arrowSwipeView" destination="MWG-tZ-Hwl" id="LCS-WS-G9Y"/>
+                        <outlet property="fullSwipeView" destination="m4s-gu-Xl2" id="cvP-m3-gw0"/>
                         <outlet property="textSwipeView" destination="dUU-2U-Pf7" id="Npi-Hs-vHe"/>
                         <outletCollection property="photoButtons" destination="aBp-KV-t5C" collectionClass="NSMutableArray" id="taE-eJ-PuA"/>
                         <outletCollection property="photoButtons" destination="WL4-gF-DRq" collectionClass="NSMutableArray" id="zXa-f1-EsV"/>
@@ -318,6 +323,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="Weg-wm-4Q1">
+                    <connections>
+                        <action selector="didSwipe:" destination="BYZ-38-t0r" id="06l-Nw-nLz"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="130.09478672985782" y="75.384615384615387"/>
         </scene>
