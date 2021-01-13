@@ -7,9 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Delm-Medium.otf">
-            <string>Delm-Medium</string>
-        </array>
         <array key="ThirstySoftRegular.otf">
             <string>ThirstySoftRegular</string>
         </array>
@@ -24,10 +21,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="m4s-gu-Xl2" userLabel="Swipe View">
-                                <rect key="frame" x="106" y="167" width="178" height="74"/>
+                                <rect key="frame" x="115.00000000000001" y="176" width="160.33333333333337" height="65"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="MWG-tZ-Hwl">
-                                        <rect key="frame" x="79" y="0.0" width="20" height="20"/>
+                                        <rect key="frame" x="70" y="0.0" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="Q9P-Mb-Mdr"/>
                                             <constraint firstAttribute="height" constant="20" id="g4I-DV-RBh"/>
@@ -40,20 +37,37 @@
                                                 <exclude reference="zC2-Bv-wFG"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=compact">
+                                        <variation key="heightClass=compact" image="Arrow Left">
                                             <mask key="constraints">
                                                 <include reference="h1d-fu-SUz"/>
                                                 <include reference="zC2-Bv-wFG"/>
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUU-2U-Pf7">
-                                        <rect key="frame" x="0.0" y="36" width="178" height="38"/>
-                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="22"/>
-                                        <state key="normal" title="Swipe up to share">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkh-EC-Hqo">
+                                        <rect key="frame" x="0.0" y="36" width="160.33333333333334" height="29"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Swipe up to share">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99611359830000001" green="0.99998587370000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="26" name="Delm-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact">
+                                            <attributedString key="attributedText">
+                                                <fragment content="Swipe left to share">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.99611359830000001" green="0.99998587370000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="26" name="Delm-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=compact" alignment="center" axis="vertical" spacing="16"/>
@@ -160,7 +174,7 @@
                                 <variation key="heightClass=compact" axis="vertical" spacing="8"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rin-UM-ltq">
-                                <rect key="frame" x="8" y="52" width="374" height="35"/>
+                                <rect key="frame" x="8" y="52" width="374" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="1M5-1r-4Cd"/>
                                 </constraints>
@@ -316,7 +330,6 @@
                         <outlet property="arrowSwipeView" destination="MWG-tZ-Hwl" id="LCS-WS-G9Y"/>
                         <outlet property="fullSwipeView" destination="m4s-gu-Xl2" id="cvP-m3-gw0"/>
                         <outlet property="mainView" destination="evC-hr-oeD" id="vLJ-zX-CUo"/>
-                        <outlet property="textSwipeView" destination="dUU-2U-Pf7" id="Npi-Hs-vHe"/>
                         <outletCollection property="photoButtons" destination="aBp-KV-t5C" collectionClass="NSMutableArray" id="taE-eJ-PuA"/>
                         <outletCollection property="photoButtons" destination="WL4-gF-DRq" collectionClass="NSMutableArray" id="zXa-f1-EsV"/>
                         <outletCollection property="photoButtons" destination="veh-T5-ZEw" collectionClass="NSMutableArray" id="Ohy-pb-mzg"/>
@@ -337,6 +350,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow Left" width="3.3333332538604736" height="4.6666665077209473"/>
         <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
         <image name="Layout 1" width="26.666666030883789" height="26.666666030883789"/>
         <image name="Layout 2" width="26.666666030883789" height="26.666666030883789"/>
