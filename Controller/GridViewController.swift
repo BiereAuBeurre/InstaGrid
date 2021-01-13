@@ -57,19 +57,35 @@ extension GridViewController {
     func moveUp(view: UIView) {
         view.center.y -= 900
     }
+    
+    func moveBackDown(view: UIView) {
+        view.center.y += 900
+    }
+    
+    func moveLeft(view:UIView) {
+        view.center.x -= 900
+    }
 
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
-        
+        /*Find out how to make  the main view come back empty when the action is ended*/
+
         switch sender.direction {
         case .up:
             print("case up")
             let duration: Double = 1.0
-            UIView.animate(withDuration: duration) {
+            UIView.animate(withDuration: duration, animations: {
                 self.moveUp(view: self.mainView)
+            }) { (finished) in
+                if finished {
+                    UIView.animate(withDuration: duration) {
+                        self.moveBackDown(view: self.mainView)
+                    }
+                }
             }
-
+            
         case.left:
             print("case left")
+            
         default:
             print("default")
         }
@@ -110,8 +126,6 @@ extension GridViewController {
     
     @IBAction func didTapMainViewbutton(_ sender: UIButton) {
         pictureButton = sender
-        /*Find out how to make progressively the main view disapear while swiping up, then come back empty when the action is ended*/
-            
         let imagePicker = UIImagePickerController()
         /// Indicate that the source of the picture's going to be the potoLibrary
         imagePicker.sourceType = .photoLibrary
@@ -123,22 +137,3 @@ extension GridViewController {
         present(imagePicker, animated: true, completion: nil)
     }
 }
-
-//import SwiftUI
-
-//struct ContentView: View {
-//    @State private var isShowingRed = false
-//
-//    var body: some View {
-//    mainView {
-//    Rectangle()
-//    .fill(Color.red)
-//    .frame(width: 200, height: 200)
-//    .transition(.asymetric(insertion: .scale, removal: .opacity))
-//    }
-//    }
-//}
-
- 
- 
- 

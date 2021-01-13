@@ -20,6 +20,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rin-UM-ltq">
+                                <rect key="frame" x="8" y="52" width="374" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="1M5-1r-4Cd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1M5-1r-4Cd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="1M5-1r-4Cd"/>
+                                    </mask>
+                                </variation>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="m4s-gu-Xl2" userLabel="Swipe View">
                                 <rect key="frame" x="115.00000000000001" y="176" width="160.33333333333337" height="65"/>
                                 <subviews>
@@ -173,25 +192,6 @@
                                 </constraints>
                                 <variation key="heightClass=compact" axis="vertical" spacing="8"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rin-UM-ltq">
-                                <rect key="frame" x="8" y="52" width="374" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="1M5-1r-4Cd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1M5-1r-4Cd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="1M5-1r-4Cd"/>
-                                    </mask>
-                                </variation>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -277,9 +277,9 @@
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="subviews">
+                                <include reference="rin-UM-ltq"/>
                                 <include reference="m4s-gu-Xl2"/>
                                 <include reference="NGJ-FJ-KGd"/>
-                                <include reference="rin-UM-ltq"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6p1-6d-Yy8"/>
