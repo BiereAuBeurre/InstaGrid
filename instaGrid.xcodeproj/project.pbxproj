@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EF829D5C2587AAB300251017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D5B2587AAB300251017 /* AppDelegate.swift */; };
 		EF829D5E2587AAB300251017 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D5D2587AAB300251017 /* SceneDelegate.swift */; };
-		EF829D602587AAB300251017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D5F2587AAB300251017 /* ViewController.swift */; };
+		EF829D602587AAB300251017 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D5F2587AAB300251017 /* GridViewController.swift */; };
 		EF829D632587AAB300251017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF829D612587AAB300251017 /* Main.storyboard */; };
 		EF829D652587AAB600251017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF829D642587AAB600251017 /* Assets.xcassets */; };
 		EF829D682587AAB600251017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF829D662587AAB600251017 /* LaunchScreen.storyboard */; };
@@ -40,7 +40,7 @@
 		EF829D582587AAB300251017 /* instaGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instaGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF829D5B2587AAB300251017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF829D5D2587AAB300251017 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF829D5F2587AAB300251017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF829D5F2587AAB300251017 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		EF829D622587AAB300251017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF829D642587AAB600251017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF829D672587AAB600251017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		EF6DD2912587B5420083523B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EF829D5F2587AAB300251017 /* ViewController.swift */,
+				EF829D5F2587AAB300251017 /* GridViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF829D602587AAB300251017 /* ViewController.swift in Sources */,
+				EF829D602587AAB300251017 /* GridViewController.swift in Sources */,
 				EF829D5C2587AAB300251017 /* AppDelegate.swift in Sources */,
 				EF829D5E2587AAB300251017 /* SceneDelegate.swift in Sources */,
 			);
