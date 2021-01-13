@@ -54,7 +54,27 @@ extension GridViewController: UINavigationControllerDelegate {
 }
 
 extension GridViewController {
+    func moveUp(view: UIView) {
+        view.center.y -= 900
+    }
+
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
+        
+        switch sender.direction {
+        case .up:
+            print("case up")
+            let duration: Double = 1.0
+            UIView.animate(withDuration: duration) {
+                self.moveUp(view: self.mainView)
+            }
+
+        case.left:
+            print("case left")
+        default:
+            print("default")
+        }
+        
+        
         if sender.state == .ended {
             print("did swipe")
             ///Defining the main view (defined in asImage()) as the activityItems' image of the viewController
