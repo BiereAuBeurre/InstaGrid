@@ -10,7 +10,7 @@ import UIKit
 final class GridViewController: UIViewController {
     
     @IBOutlet weak var arrowSwipeView: UIImageView!
-    @IBOutlet weak var textSwipeView: UIButton!
+    @IBOutlet weak var textSwipeView: UILabel!
     @IBOutlet weak var fullSwipeView: UIStackView!
     @IBOutlet weak var mainView: UIView!
     
@@ -65,6 +65,7 @@ extension GridViewController {
     func moveLeft(view:UIView) {
         view.center.x -= 900
     }
+    
 
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
         /*Find out how to make  the main view come back empty when the action is ended*/
@@ -75,22 +76,15 @@ extension GridViewController {
             let duration: Double = 1.0
             UIView.animate(withDuration: duration, animations: {
                 self.moveUp(view: self.mainView)
-            }) { (finished) in
-                if finished {
-                    UIView.animate(withDuration: duration) {
-                        self.moveBackDown(view: self.mainView)
-                    }
-                }
-            }
-            
+            })
+//            { (_) in
+//                    self.moveBackDown(view: self.mainView)
+//            }
         case.left:
             print("case left")
-            
         default:
             print("default")
         }
-        
-        
         if sender.state == .ended {
             print("did swipe")
             ///Defining the main view (defined in asImage()) as the activityItems' image of the viewController
@@ -101,8 +95,9 @@ extension GridViewController {
                 popoverController.sourceView = self.view
                 popoverController.sourceRect = self.view.bounds
             }
-            /// Then present the viewController define in lines 43-46 above
+            /// Then present the viewController define in lines above
             present(viewController, animated: true, completion: nil)
+            
         }
     }
     
@@ -116,9 +111,11 @@ extension GridViewController {
             photoButtons[0].isHidden = true
             photoButtons[3].isHidden = false
         } else if sender == layoutButtons[1] {
+            layoutButtons[0].imageView?.isHidden = true
             photoButtons[3].isHidden = true
             photoButtons[0].isHidden = false
         } else {
+            layoutButtons[0].imageView?.isHidden = true
             photoButtons[0].isHidden = false
             photoButtons[3].isHidden = false
         }
