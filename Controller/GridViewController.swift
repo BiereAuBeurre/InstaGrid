@@ -13,12 +13,9 @@ final class GridViewController: UIViewController {
     @IBOutlet weak var textSwipeView: UILabel!
     @IBOutlet weak var fullSwipeView: UIStackView!
     @IBOutlet weak var mainView: UIView!
-    
     var pictureButton: UIButton!
-    
     @IBOutlet var photoButtons: [UIButton]!
     @IBOutlet var layoutButtons: [UIButton]!
-    
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -36,7 +33,7 @@ final class GridViewController: UIViewController {
     
     func openShareController(sender: UIGestureRecognizer) {
         if sender.state == .ended {
-            print("did swipe")
+            print("share controller opened")
             ///Defining the main view (defined in asImage()) as the activityItems' image of the viewController
             let image = asImage()
             let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
@@ -81,7 +78,7 @@ extension GridViewController {
             self.mainView?.transform = CGAffineTransform(translationX: x, y: y)
         })
     }
-  
+    
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case .up:
@@ -96,8 +93,7 @@ extension GridViewController {
                 self.gridAnimation(x: -900, y: -0)
                 openShareController(sender: sender)
             }
-        default:
-            print("default")
+        default: break
         }
     }
     
