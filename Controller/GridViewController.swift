@@ -50,7 +50,6 @@ extension GridViewController: UIImagePickerControllerDelegate {
 }
 
 extension GridViewController: UINavigationControllerDelegate {
-    
 }
 
 extension GridViewController {
@@ -65,10 +64,9 @@ extension GridViewController {
     func moveLeft(view:UIView) {
         view.center.x -= 900
     }
-    
-
+  
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
-        /*Find out how to make  the main view come back empty when the action is ended*/
+        /*Find out how to make the main view come back only when the action is ended*/
 
         switch sender.direction {
         case .up:
@@ -90,6 +88,15 @@ extension GridViewController {
             ///Defining the main view (defined in asImage()) as the activityItems' image of the viewController
             let image = asImage()
             let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
+            viewController.completionWithItemsHandler = { (nil, completed, _, error) in
+                if completed {
+                    UIView.animate(withDuration: 0.5, animations: {
+                        self.moveBackDown(view: self.mainView)
+                    }) } else {
+                        UIView.animate(withDuration: 0.5, animations: {
+                            self.moveBackDown(view: self.mainView)
+                        }) }
+            }
             /// Creating the popOverController (the sharing menu)
             if let popoverController = viewController.popoverPresentationController {
                 popoverController.sourceView = self.view
@@ -97,7 +104,7 @@ extension GridViewController {
             }
             /// Then present the viewController define in lines above
             present(viewController, animated: true, completion: nil)
-            
+            //            viewWillAppear(true)
         }
     }
     
