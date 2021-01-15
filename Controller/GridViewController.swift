@@ -42,12 +42,10 @@ final class GridViewController: UIViewController {
             let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
             viewController.completionWithItemsHandler = { (nil, completed, _, error) in
                 if completed {
-                    UIView.animate(withDuration: 0.5, animations: {
-                        self.moveBackDown(view: self.mainView)
-                    }) } else {
-                        UIView.animate(withDuration: 0.5, animations: {
-                            self.moveBackDown(view: self.mainView)
-                        }) }
+                    self.gridAnimation(x: 0, y: 0)
+                } else {
+                    self.gridAnimation(x: 0, y: 0)
+                }
             }
             /// Creating the popOverController (the sharing menu)
             if let popoverController = viewController.popoverPresentationController {
@@ -78,38 +76,29 @@ extension GridViewController: UINavigationControllerDelegate {
 }
 
 extension GridViewController {
-    func moveUp(view: UIView) {
-        view.center.y -= 900
-    }
-    
-    func moveBackDown(view: UIView) {
-        view.center.y += 900
-    }
-    
-    func moveLeft(view:UIView) {
-        view.center.x -= 900
+    func gridAnimation(x: CGFloat, y: CGFloat) {
+        UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
+            self.mainView?.transform = CGAffineTransform(translationX: x, y: y)
+        })
     }
   
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case .up:
-            print("case up")
-            let duration: Double = 1.0
-            UIView.animate(withDuration: duration, animations: {
-                self.moveUp(view: self.mainView)
-            })
-        case.left:
-            print("case left")
-            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft {
-                let duration: Double = 1.0
-                UIView.animate(withDuration: duration, animations: {
-                    self.moveLeft(view: self.mainView)
-                })
+            if UIDevice.current.orientation == UIDeviceOrientation.portrait {
+                print("case up")
+                self.gridAnimation(x: 0, y: -900)
+                openShareController(sender: sender)
+            }
+        case .left:
+            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+                print("case left")
+                self.gridAnimation(x: -900, y: -0)
+                openShareController(sender: sender)
             }
         default:
             print("default")
         }
-        openShareController(sender: sender)
     }
     
     @IBAction func didTapLayoutButton(_ sender: UIButton) {
@@ -139,8 +128,6 @@ extension GridViewController {
         imagePicker.sourceType = .photoLibrary
         /// Indicate to the picture to place itself where the user tap
         imagePicker.delegate = self
-        /// Allow the editing by resizing, useless because of the content mode scaleAspectFill below  :
-        /*imagePicker.allowsEditing = true*/
         /// Activate the animation that open the library, if disabled nothing happened after taping button
         present(imagePicker, animated: true, completion: nil)
     }
