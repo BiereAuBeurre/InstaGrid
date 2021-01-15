@@ -20,6 +20,7 @@ final class GridViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        layoutButtons[0].isSelected = true
     }
     
     func asImage() -> UIImage {
@@ -107,11 +108,11 @@ extension GridViewController {
             photoButtons[0].isHidden = true
             photoButtons[3].isHidden = false
         } else if sender == layoutButtons[1] {
-            layoutButtons[0].imageView?.isHidden = true
+//            layoutButtons[0].imageView?.isHidden = true
             photoButtons[3].isHidden = true
             photoButtons[0].isHidden = false
         } else {
-            layoutButtons[0].imageView?.isHidden = true
+//            layoutButtons[0].imageView?.isHidden = true
             photoButtons[0].isHidden = false
             photoButtons[3].isHidden = false
         }
