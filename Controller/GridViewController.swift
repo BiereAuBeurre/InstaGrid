@@ -33,6 +33,31 @@ final class GridViewController: UIViewController {
         UIGraphicsEndImageContext()
         return UIImage(cgImage: image!.makeImage()!)
     }
+    
+    func openShareController(sender: UIGestureRecognizer) {
+        if sender.state == .ended {
+            print("did swipe")
+            ///Defining the main view (defined in asImage()) as the activityItems' image of the viewController
+            let image = asImage()
+            let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
+            viewController.completionWithItemsHandler = { (nil, completed, _, error) in
+                if completed {
+                    UIView.animate(withDuration: 0.5, animations: {
+                        self.moveBackDown(view: self.mainView)
+                    }) } else {
+                        UIView.animate(withDuration: 0.5, animations: {
+                            self.moveBackDown(view: self.mainView)
+                        }) }
+            }
+            /// Creating the popOverController (the sharing menu)
+            if let popoverController = viewController.popoverPresentationController {
+                popoverController.sourceView = self.view
+                popoverController.sourceRect = self.view.bounds
+            }
+            /// Then present the viewController define in lines above
+            present(viewController, animated: true, completion: nil)
+        }
+    }
 }
 
 extension GridViewController: UIImagePickerControllerDelegate {
@@ -66,8 +91,6 @@ extension GridViewController {
     }
   
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
-        /*Find out how to make the main view come back only when the action is ended*/
-
         switch sender.direction {
         case .up:
             print("case up")
@@ -75,37 +98,18 @@ extension GridViewController {
             UIView.animate(withDuration: duration, animations: {
                 self.moveUp(view: self.mainView)
             })
-//            { (_) in
-//                    self.moveBackDown(view: self.mainView)
-//            }
         case.left:
             print("case left")
+            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft {
+                let duration: Double = 1.0
+                UIView.animate(withDuration: duration, animations: {
+                    self.moveLeft(view: self.mainView)
+                })
+            }
         default:
             print("default")
         }
-        if sender.state == .ended {
-            print("did swipe")
-            ///Defining the main view (defined in asImage()) as the activityItems' image of the viewController
-            let image = asImage()
-            let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
-            viewController.completionWithItemsHandler = { (nil, completed, _, error) in
-                if completed {
-                    UIView.animate(withDuration: 0.5, animations: {
-                        self.moveBackDown(view: self.mainView)
-                    }) } else {
-                        UIView.animate(withDuration: 0.5, animations: {
-                            self.moveBackDown(view: self.mainView)
-                        }) }
-            }
-            /// Creating the popOverController (the sharing menu)
-            if let popoverController = viewController.popoverPresentationController {
-                popoverController.sourceView = self.view
-                popoverController.sourceRect = self.view.bounds
-            }
-            /// Then present the viewController define in lines above
-            present(viewController, animated: true, completion: nil)
-            //            viewWillAppear(true)
-        }
+        openShareController(sender: sender)
     }
     
     @IBAction func didTapLayoutButton(_ sender: UIButton) {
