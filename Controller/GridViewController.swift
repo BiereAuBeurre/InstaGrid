@@ -8,35 +8,31 @@
 import UIKit
 
 final class GridViewController: UIViewController {
-    
-    @IBOutlet weak var arrowSwipeView: UIImageView!
-    @IBOutlet weak var textSwipeView: UILabel!
-    @IBOutlet weak var fullSwipeView: UIStackView!
-    @IBOutlet weak var mainView: UIView!
-    var pictureButton: UIButton!
-    @IBOutlet var photoButtons: [UIButton]!
-    @IBOutlet var layoutButtons: [UIButton]!
-    var imagePicker = UIImagePickerController()
-    
+    @IBOutlet private weak var mainView: UIView!
+    @IBOutlet private var photoButtons: [UIButton]!
+    @IBOutlet private var layoutButtons: [UIButton]!
+    private weak var pictureButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutButtons[0].isSelected = true
     }
     
-    func asImage() -> UIImage {
-        ///Defining the mainView
+    private func asImage() -> UIImage? {
+        /// Defining the mainView.
         UIGraphicsBeginImageContext(mainView.frame.size)
         mainView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetCurrentContext()
-        UIGraphicsEndImageContext()
-        return UIImage(cgImage: image!.makeImage()!)
+        if let image = UIGraphicsGetCurrentContext(), let cgImage = image.makeImage() {
+            UIGraphicsEndImageContext()
+            return UIImage(cgImage: cgImage)
+        }
+        return nil
     }
     
-    func openShareController(sender: UIGestureRecognizer) {
-        if sender.state == .ended {
+    private func openShareController(sender: UIGestureRecognizer) {
+        /// Defining the main view (defined in asImage()) as the activityItems' image of the viewController.
+        if sender.state == .ended, let image = asImage() {
             print("share controller opened")
-            ///Defining the main view (defined in asImage()) as the activityItems' image of the viewController
-            let image = asImage()
             let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
             viewController.completionWithItemsHandler = { (nil, completed, _, error) in
                 if completed {
@@ -45,12 +41,12 @@ final class GridViewController: UIViewController {
                     self.gridAnimation(x: 0, y: 0)
                 }
             }
-            /// Creating the popOverController (the sharing menu)
+            /// Creating the popOverController (the sharing menu).
             if let popoverController = viewController.popoverPresentationController {
                 popoverController.sourceView = self.view
                 popoverController.sourceRect = self.view.bounds
             }
-            /// Then present the viewController define in lines above
+            /// Then present the viewController define in lines above.
             present(viewController, animated: true, completion: nil)
         }
     }
@@ -58,12 +54,12 @@ final class GridViewController: UIViewController {
 
 extension GridViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        ///Add the animation (progressive disapearance of the photo menu)  when the picture is picked
+        ///Add the animation (progressive disapearance of the photo menu)  when the picture is picked.
         picker.dismiss(animated: true) { [weak self] in
             if let image = info[.originalImage] as? UIImage {
-                /// Indicate to set the selectionned picture (let image) in the selectionned picture button
+                /// Indicate to set the selectionned picture (let image) in the selectionned picture button.
                 self?.pictureButton?.setImage(image, for: .normal)
-                /// Then said that the picture'll fill the selectionned button
+                /// Then said that the picture'll fill the selectionned button.
                 self?.pictureButton?.imageView?.contentMode = .scaleAspectFill
             }
         }
@@ -73,7 +69,7 @@ extension GridViewController: UIImagePickerControllerDelegate {
 extension GridViewController: UINavigationControllerDelegate {
 }
 
-extension GridViewController {
+private extension GridViewController {
     func gridAnimation(x: CGFloat, y: CGFloat) {
         UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
             self.mainView?.transform = CGAffineTransform(translationX: x, y: y)
@@ -98,6 +94,11 @@ extension GridViewController {
         }
     }
     
+    func hideGridButton(topLeft: Bool, bottomRight: Bool) {
+        photoButtons[0].isHidden = topLeft
+        photoButtons[3].isHidden = bottomRight
+    }
+    
     @IBAction func didTapLayoutButton(_ sender: UIButton) {
         for button in layoutButtons {
             button.isSelected = false
@@ -105,16 +106,11 @@ extension GridViewController {
         sender.isSelected = true
         
         if sender == layoutButtons[0] {
-            photoButtons[0].isHidden = true
-            photoButtons[3].isHidden = false
+            hideGridButton(topLeft: true, bottomRight: false)
         } else if sender == layoutButtons[1] {
-//            layoutButtons[0].imageView?.isHidden = true
-            photoButtons[3].isHidden = true
-            photoButtons[0].isHidden = false
+            hideGridButton(topLeft: false, bottomRight: true)
         } else {
-//            layoutButtons[0].imageView?.isHidden = true
-            photoButtons[0].isHidden = false
-            photoButtons[3].isHidden = false
+            hideGridButton(topLeft: false, bottomRight: false)
         }
     }
     

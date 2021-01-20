@@ -80,7 +80,7 @@
                                                 <fragment content="Swipe left to share">
                                                     <attributes>
                                                         <color key="NSColor" red="0.99611359830000001" green="0.99998587370000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="26" name="Delm-Medium"/>
+                                                        <font key="NSFont" size="18" name="Delm-Medium"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
@@ -197,7 +197,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="evC-hr-oeD" firstAttribute="leading" secondItem="m4s-gu-Xl2" secondAttribute="trailing" constant="32" id="1dL-3K-hJb"/>
+                            <constraint firstItem="evC-hr-oeD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m4s-gu-Xl2" secondAttribute="trailing" constant="8" id="1dL-3K-hJb"/>
                             <constraint firstItem="evC-hr-oeD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="6ok-Fq-2Jl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="evC-hr-oeD" secondAttribute="trailing" constant="24" id="6p1-6d-Yy8"/>
                             <constraint firstItem="NGJ-FJ-KGd" firstAttribute="top" secondItem="evC-hr-oeD" secondAttribute="bottom" constant="24" id="7cc-ZE-G03"/>
@@ -224,6 +224,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="m4s-gu-Xl2" secondAttribute="bottom" constant="121.33" id="URB-0p-ewE">
                                 <variation key="heightClass=compact" constant="112"/>
                             </constraint>
+                            <constraint firstItem="m4s-gu-Xl2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VSF-pg-Fkn"/>
                             <constraint firstItem="NGJ-FJ-KGd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b4d-vW-NDW"/>
                             <constraint firstItem="evC-hr-oeD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-16" id="beY-AM-Zr4">
                                 <variation key="heightClass=compact" constant="16"/>
@@ -261,6 +262,7 @@
                                 <exclude reference="INr-qW-q41"/>
                                 <exclude reference="OR8-90-fwP"/>
                                 <exclude reference="URB-0p-ewE"/>
+                                <exclude reference="VSF-pg-Fkn"/>
                                 <exclude reference="1dL-3K-hJb"/>
                                 <exclude reference="FrD-QA-3nQ"/>
                                 <exclude reference="beY-AM-Zr4"/>
@@ -296,6 +298,7 @@
                                 <exclude reference="INr-qW-q41"/>
                                 <exclude reference="OR8-90-fwP"/>
                                 <include reference="URB-0p-ewE"/>
+                                <include reference="VSF-pg-Fkn"/>
                                 <include reference="1dL-3K-hJb"/>
                                 <exclude reference="6ok-Fq-2Jl"/>
                                 <include reference="FrD-QA-3nQ"/>
@@ -328,10 +331,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="arrowSwipeView" destination="MWG-tZ-Hwl" id="LCS-WS-G9Y"/>
-                        <outlet property="fullSwipeView" destination="m4s-gu-Xl2" id="cvP-m3-gw0"/>
                         <outlet property="mainView" destination="evC-hr-oeD" id="vLJ-zX-CUo"/>
-                        <outlet property="textSwipeView" destination="Tkh-EC-Hqo" id="oaE-xs-5ne"/>
                         <outletCollection property="photoButtons" destination="aBp-KV-t5C" collectionClass="NSMutableArray" id="taE-eJ-PuA"/>
                         <outletCollection property="photoButtons" destination="WL4-gF-DRq" collectionClass="NSMutableArray" id="zXa-f1-EsV"/>
                         <outletCollection property="photoButtons" destination="veh-T5-ZEw" collectionClass="NSMutableArray" id="Ohy-pb-mzg"/>
