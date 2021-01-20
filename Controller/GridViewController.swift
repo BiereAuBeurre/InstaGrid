@@ -31,7 +31,7 @@ final class GridViewController: UIViewController {
     
     private func openShareController(sender: UIGestureRecognizer) {
         /// Defining the main view (defined in asImage()) as the activityItems' image of the viewController.
-        if sender.state == .ended, let image = asImage() {
+        if let image = asImage() {
             print("share controller opened")
             let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
             viewController.completionWithItemsHandler = { (nil, completed, _, error) in
@@ -42,12 +42,10 @@ final class GridViewController: UIViewController {
                 }
             }
             /// Creating the popOverController (the sharing menu).
-            if let popoverController = viewController.popoverPresentationController {
-                popoverController.sourceView = self.view
-                popoverController.sourceRect = self.view.bounds
-            }
+//
+            
             /// Then present the viewController define in lines above.
-            present(viewController, animated: true, completion: nil)
+            present(viewController, animated: true)
         }
     }
 }
@@ -122,6 +120,6 @@ private extension GridViewController {
         /// Indicate to the picture to place itself where the user tap
         imagePicker.delegate = self
         /// Activate the animation that open the library, if disabled nothing happened after taping button
-        present(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true)
     }
 }
