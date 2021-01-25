@@ -29,14 +29,32 @@ final class GridViewController: UIViewController {
         return nil
     }
     
+    /// Find out where has to be called and to what conditioned it
+    private func showAlert() {
+        /// if gridViewImagesFull == false {}
+        // create the alert
+        let alert = UIAlertController(title: "Partage impossible 🙁", message: "Vous n'avez pas fini ! Complétez les photos manquantes pour partager votre montage.", preferredStyle: UIAlertController.Style.alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Ok 👍", style: UIAlertAction.Style.default, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func isGridViewFull(){
+    
+    }
+    
     private func openShareController(sender: UIGestureRecognizer) {
+        showAlert()
         /// Defining the main view (defined in asImage()) as the activityItems' image of the viewController.
         if let image = asImage() {
-            print("share controller opened")
+            print("shareController opened")
             let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
             viewController.completionWithItemsHandler = { (nil, completed, _, error) in
                 if completed {
                     self.gridAnimation(x: 0, y: 0)
+                    
+                    /// If the sharing action is done, reset the gridView by deleting the custom photos.
                     for button in self.photoButtons {
                         button.setImage(UIImage(named: "Plus"), for: .normal)
                     }
