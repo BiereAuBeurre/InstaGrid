@@ -37,12 +37,13 @@ final class GridViewController: UIViewController {
             viewController.completionWithItemsHandler = { (nil, completed, _, error) in
                 if completed {
                     self.gridAnimation(x: 0, y: 0)
+                    for button in self.photoButtons {
+                        button.setImage(UIImage(named: "Plus"), for: .normal)
+                    }
                 } else {
                     self.gridAnimation(x: 0, y: 0)
                 }
             }
-            /// Creating the popOverController (the sharing menu).
-            
             /// Then present the viewController define in lines above.
             present(viewController, animated: true)
         }
@@ -114,11 +115,11 @@ private extension GridViewController {
     @IBAction func didTapMainViewbutton(_ sender: UIButton) {
         pictureButton = sender
         let imagePicker = UIImagePickerController()
-        /// Indicate that the source of the picture's going to be the potoLibrary
+        /// Indicate that the source of the picture's going to be the photoLibrary.
         imagePicker.sourceType = .photoLibrary
-        /// Indicate to the picture to place itself where the user tap
+        /// Indicate to the picture to place itself where the user tap.
         imagePicker.delegate = self
-        /// Activate the animation that open the library, if disabled nothing happened after taping button
+        /// Activate the animation that open the library, if disabled nothing happened after taping button.
         present(imagePicker, animated: true)
     }
 }
