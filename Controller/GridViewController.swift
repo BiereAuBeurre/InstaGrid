@@ -42,7 +42,6 @@ final class GridViewController: UIViewController {
                 }
             }
             /// Creating the popOverController (the sharing menu).
-//
             
             /// Then present the viewController define in lines above.
             present(viewController, animated: true)
