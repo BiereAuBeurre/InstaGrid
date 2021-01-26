@@ -7,12 +7,15 @@
 
 import UIKit
 
+// MARK: - Final class GridViewController
+
 final class GridViewController: UIViewController {
+    // MARK: - Outlets & var properties
     @IBOutlet private weak var mainView: UIView!
     @IBOutlet private var photoButtons: [UIButton]!
     @IBOutlet private var layoutButtons: [UIButton]!
     private weak var pictureButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutButtons[0].isSelected = true
@@ -29,26 +32,7 @@ final class GridViewController: UIViewController {
         return nil
     }
     
-    private func showAlert() {
-        /// Create the alert.
-        let alert = UIAlertController(title: "Partage impossible 🙁", message: "Vous n'avez pas terminé votre montage. Complétez avec la/les photo(s) manquante(s) pour partager votre création.", preferredStyle: UIAlertController.Style.actionSheet)
-        /// Add an action (ok button).
-        alert.addAction(UIAlertAction(title: "Ok 👍", style: UIAlertAction.Style.default, handler: nil))
-        /// Then show the alert on screen.
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-//    private func isGridViewFull() -> Bool {
-//        /// Vérifier que les images qui ne sont pas hidden ont bien été modifiés et qu'aucune n'a l'image "Plus".
-//        if pictureButton != nil {
-//            return true
-//        }
-//        return (pictureButton != nil)
-//    }
-    
     private func openShareController(sender: UIGestureRecognizer) {
-        /// if isGridViewFull() == false { showAlert(), self.gridAnimation(x: 0, y: 0) }
-        /// else {code below}
         /// Defining the main view (defined in asImage()) as the activityItems' image of the viewController.
         if let image = asImage() {
             print("shareController opened")
@@ -71,6 +55,7 @@ final class GridViewController: UIViewController {
     }
 }
 
+// MARK: - Exention GridViewController
 extension GridViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         ///Add the animation (progressive disapearance of the photo menu)  when the picture is picked.
@@ -85,10 +70,13 @@ extension GridViewController: UIImagePickerControllerDelegate {
     }
 }
 
+// MARK: - Exention GridViewController
+
 extension GridViewController: UINavigationControllerDelegate {
 }
 
 private extension GridViewController {
+    /// Animating the mainView when share.
     func gridAnimation(x: CGFloat, y: CGFloat) {
         UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
             self.mainView?.transform = CGAffineTransform(translationX: x, y: y)
@@ -96,6 +84,7 @@ private extension GridViewController {
     }
     
     @IBAction func didSwipe(_ sender: UISwipeGestureRecognizer) {
+        /// Switch the swipe direction detection depending on the device orientation.
         switch sender.direction {
         case .up:
             if UIDevice.current.orientation == UIDeviceOrientation.portrait {
@@ -134,6 +123,7 @@ private extension GridViewController {
     }
     
     @IBAction func didTapMainViewbutton(_ sender: UIButton) {
+        /// Indicate that the sender action'll be the picture button
         pictureButton = sender
         let imagePicker = UIImagePickerController()
         /// Indicate that the source of the picture's going to be the photoLibrary.
