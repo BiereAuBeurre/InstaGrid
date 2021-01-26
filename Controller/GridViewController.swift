@@ -38,13 +38,14 @@ final class GridViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func isGridViewFull() -> Bool {
-        /// Vérifier que les images qui ne sont pas hidden ont bien été modifiés et qu'aucune n'a l'image "Plus".
-        if pictureButton != nil {
-            return true
-        }
-        return (pictureButton != nil)
-    }
+//    private func isGridViewFull() -> Bool {
+//        /// Vérifier que les images qui ne sont pas hidden ont bien été modifiés et qu'aucune n'a l'image "Plus".
+//        if pictureButton != nil {
+//            return true
+//        }
+//        return (pictureButton != nil)
+//    }
+    
     private func openShareController(sender: UIGestureRecognizer) {
         /// if isGridViewFull() == false { showAlert(), self.gridAnimation(x: 0, y: 0) }
         /// else {code below}
