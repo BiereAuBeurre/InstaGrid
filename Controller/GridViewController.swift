@@ -15,6 +15,7 @@ final class GridViewController: UIViewController {
     @IBOutlet private var photoButtons: [UIButton]!
     @IBOutlet private var layoutButtons: [UIButton]!
     private weak var pictureButton: UIButton!
+    var gridViewState: HiddenGridButtons = .OneTopTwoBottom
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,9 +103,23 @@ private extension GridViewController {
         }
     }
     
-    func hideGridButton(topLeft: Bool, bottomRight: Bool) {
-        photoButtons[0].isHidden = topLeft
-        photoButtons[3].isHidden = bottomRight
+//    func hideGridButton(topLeft: Bool, bottomRight: Bool) {
+//        photoButtons[0].isHidden = topLeft
+//        photoButtons[3].isHidden = bottomRight
+//    }
+    
+    func updateLayouts() {
+        switch gridViewState {
+        case .OneTopTwoBottom:
+            photoButtons[0].isHidden = true
+            photoButtons[3].isHidden = false
+        case .TwoTopOneBottom:
+            photoButtons[0].isHidden = false
+            photoButtons[3].isHidden = true
+        case .TwoTopTwoBottom:
+            photoButtons[0].isHidden = false
+            photoButtons[3].isHidden = false
+        }
     }
     
     @IBAction func didTapLayoutButton(_ sender: UIButton) {
@@ -112,14 +127,14 @@ private extension GridViewController {
             button.isSelected = false
         }
         sender.isSelected = true
-        
         if sender == layoutButtons[0] {
-            hideGridButton(topLeft: true, bottomRight: false)
+            gridViewState = .OneTopTwoBottom
         } else if sender == layoutButtons[1] {
-            hideGridButton(topLeft: false, bottomRight: true)
+            gridViewState = .TwoTopOneBottom
         } else {
-            hideGridButton(topLeft: false, bottomRight: false)
+            gridViewState = .TwoTopTwoBottom
         }
+        updateLayouts()
     }
     
     @IBAction func didTapMainViewbutton(_ sender: UIButton) {

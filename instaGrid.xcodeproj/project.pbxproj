@@ -15,6 +15,7 @@
 		EF829D682587AAB600251017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF829D662587AAB600251017 /* LaunchScreen.storyboard */; };
 		EF829D732587AAB600251017 /* instaGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D722587AAB600251017 /* instaGridTests.swift */; };
 		EF829D7E2587AAB600251017 /* instaGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF829D7D2587AAB600251017 /* instaGridUITests.swift */; };
+		EF858DD925C19A59004BB2D0 /* MainViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF858DD825C19A59004BB2D0 /* MainViewState.swift */; };
 		EF8A28402587AEBE00411DB8 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF8A283F2587AEBE00411DB8 /* ThirstySoftRegular.otf */; };
 		EF8A28482587AEC500411DB8 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF8A28472587AEC500411DB8 /* Delm-Medium.otf */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		EF829D792587AAB600251017 /* instaGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instaGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF829D7D2587AAB600251017 /* instaGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instaGridUITests.swift; sourceTree = "<group>"; };
 		EF829D7F2587AAB600251017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF858DD825C19A59004BB2D0 /* MainViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewState.swift; sourceTree = "<group>"; };
 		EF8A283F2587AEBE00411DB8 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		EF8A28472587AEC500411DB8 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 		EF6DD28F2587B5350083523B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF858DD825C19A59004BB2D0 /* MainViewState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				EF829D602587AAB300251017 /* GridViewController.swift in Sources */,
 				EF829D5C2587AAB300251017 /* AppDelegate.swift in Sources */,
 				EF829D5E2587AAB300251017 /* SceneDelegate.swift in Sources */,
+				EF858DD925C19A59004BB2D0 /* MainViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
